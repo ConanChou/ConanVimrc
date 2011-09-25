@@ -22,6 +22,7 @@
 "    -> Colors and Fonts
 "    -> Files and backups
 "    -> Text, tab and indent related
+"    -> Folding
 "    -> Visual mode related
 "    -> Command mode related
 "    -> Moving around, tabs and buffers
@@ -225,6 +226,15 @@ set tw=500
 set ai "Auto indent
 set si "Smart indet
 set wrap "Wrap lines
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Folding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
 
 
 """"""""""""""""""""""""""""""
