@@ -1,1 +1,4 @@
 .VimballRecord
+*.o
+*.log
+Makefile
