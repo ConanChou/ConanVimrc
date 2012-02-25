@@ -177,13 +177,15 @@ endif
 if has("gui_running")
   set guioptions-=T
   set t_Co=256
-  set background=dark
   colorscheme peaksea
+  set background=dark
   set nu
+  set relativenumber
 else
   colorscheme zellner
   set background=dark
   set nu
+  set relativenumber
 endif
 
 set encoding=utf8
@@ -491,7 +493,9 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Remap VIM 0
-map 0 ^
+"map 0 ^
+
+map <F6> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
