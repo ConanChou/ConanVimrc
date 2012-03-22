@@ -67,6 +67,8 @@
 "       Command-T plug-in provides an extremely fast, intuitive mechanism for opening filesa:
 "           info -> :help CommandT
 "
+"     > Gist.vim - https://github.com/mattn/gist-vim
+"       vimscript for gist 
 "
 "  Revisions:
 "     > 0.1: Create the repo, a copy from my Ubuntu
@@ -177,13 +179,15 @@ endif
 if has("gui_running")
   set guioptions-=T
   set t_Co=256
-  set background=dark
   colorscheme peaksea
+  set background=dark
   set nu
+"  set relativenumber
 else
   colorscheme zellner
   set background=dark
   set nu
+"  set relativenumber
 endif
 
 set encoding=utf8
@@ -491,7 +495,9 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Remap VIM 0
-map 0 ^
+"map 0 ^
+
+map <F6> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
@@ -633,6 +639,12 @@ set wildignore+=*.o,*.obj,.git,*.pyc
 noremap <leader>y :CommandTFlush<cr>
 "noremap! <leader>j :PeepOpen<cr>
 
+""""""""""""""""""""""""""""""
+" => Gist.vim
+""""""""""""""""""""""""""""""
+let g:gist_clip_command = 'xclip -selection clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
 
 """"""""""""""""""""""""""""""
 " => Vim grep
