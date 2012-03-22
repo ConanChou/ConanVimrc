@@ -67,6 +67,8 @@
 "       Command-T plug-in provides an extremely fast, intuitive mechanism for opening filesa:
 "           info -> :help CommandT
 "
+"     > Gist.vim - https://github.com/mattn/gist-vim
+"       vimscript for gist 
 "
 "  Revisions:
 "     > 0.1: Create the repo, a copy from my Ubuntu
@@ -180,12 +182,12 @@ if has("gui_running")
   colorscheme peaksea
   set background=dark
   set nu
-  set relativenumber
+"  set relativenumber
 else
   colorscheme zellner
   set background=dark
   set nu
-  set relativenumber
+"  set relativenumber
 endif
 
 set encoding=utf8
@@ -637,6 +639,12 @@ set wildignore+=*.o,*.obj,.git,*.pyc
 noremap <leader>y :CommandTFlush<cr>
 "noremap! <leader>j :PeepOpen<cr>
 
+""""""""""""""""""""""""""""""
+" => Gist.vim
+""""""""""""""""""""""""""""""
+let g:gist_clip_command = 'xclip -selection clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
 
 """"""""""""""""""""""""""""""
 " => Vim grep
