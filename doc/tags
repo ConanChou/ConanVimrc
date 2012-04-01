@@ -310,6 +310,7 @@ g:snips_author	snipMate.txt	/*g:snips_author*
 gist-vim-install	gist-vim.txt	/*gist-vim-install*
 gist-vim-license	gist-vim.txt	/*gist-vim-license*
 gist-vim-requirements	gist-vim.txt	/*gist-vim-requirements*
+gist-vim-setup	gist-vim.txt	/*gist-vim-setup*
 gist-vim-thanks	gist-vim.txt	/*gist-vim-thanks*
 gist-vim-tips	gist-vim.txt	/*gist-vim-tips*
 gist-vim-usage	gist-vim.txt	/*gist-vim-usage*
