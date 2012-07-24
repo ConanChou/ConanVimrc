@@ -37,6 +37,7 @@
 "    -> Python section
 "    -> JavaScript section
 "
+"    -> CursorLine and ColumnLine
 "
 " Plugins_Included:
 "     > minibufexpl.vim - http://www.vim.org/scripts/script.php?script_id=159
@@ -185,7 +186,7 @@ endif
 if has("gui_running")
   set guioptions-=T
   set t_Co=256
-  colorscheme peaksea
+  colorscheme solarized
   set background=dark
   set nu
 "  set relativenumber
@@ -692,3 +693,10 @@ if MySys() == "mac"
 endif
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Line and column highlight
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+":nnoremap <Leader>cl :set cursorline! cursorcolumn!<CR>
+"hi CursorColumn guibg=#2A2A2A
+"hi CursorLine   guibg=#2A2A2A
+set cursorline cursorcolumn
