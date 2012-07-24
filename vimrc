@@ -645,6 +645,7 @@ noremap <leader>y :CommandTFlush<cr>
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
+let g:github_token = '7052a94413969d07296def10754c70f2'
 
 """"""""""""""""""""""""""""""
 " => Vim grep
