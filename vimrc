@@ -75,6 +75,14 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call pathogen#infect()
+syntax on
+filetype plugin indent on
+let g:Powerline_symbols = 'fancy'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape in different modes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
@@ -133,7 +141,7 @@ set wildmenu "Turn on WiLd menu
 
 set ruler "Always show current position
 
-set cmdheight=2 "The commandbar height
+set cmdheight=1 "The commandbar height
 
 set hid "Change buffer - without saving
 
@@ -550,8 +558,8 @@ let g:miniBufExplorerMoreThanOne = 0
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplVSplit = 30
-let g:miniBufExplSplitBelow=1
+"let g:miniBufExplVSplit = 30
+let g:miniBufExplSplitBelow=0
 
 autocmd BufRead,BufNew :call UMiniBufExplorer
 
@@ -563,6 +571,11 @@ map <leader>u :TMiniBufExplorer<cr>
 " => Omni complete functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
