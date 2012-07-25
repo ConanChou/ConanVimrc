@@ -696,7 +696,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Line and column highlight
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-":nnoremap <Leader>cl :set cursorline! cursorcolumn!<CR>
-"hi CursorColumn guibg=#2A2A2A
-"hi CursorLine   guibg=#2A2A2A
+hi CursorLine   cterm=NONE ctermbg=DarkBlue
+hi CursorColumn ctermbg=DarkBlue
 set cursorline cursorcolumn
