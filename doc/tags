@@ -63,6 +63,7 @@
 :IndentGuidesDisable	indent_guides.txt	/*:IndentGuidesDisable*
 :IndentGuidesEnable	indent_guides.txt	/*:IndentGuidesEnable*
 :IndentGuidesToggle	indent_guides.txt	/*:IndentGuidesToggle*
+:Rvm	rvm.txt	/*:Rvm*
 :Snippet	snippets_emu.txt	/*:Snippet*
 :TlistAddFiles	taglist.txt	/*:TlistAddFiles*
 :TlistAddFilesRecursive	taglist.txt	/*:TlistAddFilesRecursive*
@@ -379,6 +380,9 @@ list-snippets	snipMate.txt	/*list-snippets*
 multi_snip	snipMate.txt	/*multi_snip*
 multiple-items-example	yankring.txt	/*multiple-items-example*
 named-tags	snippets_emu.txt	/*named-tags*
+rvm#statusline()	rvm.txt	/*rvm#statusline()*
+rvm-about	rvm.txt	/*rvm-about*
+rvm.txt	rvm.txt	/*rvm.txt*
 snip-advanced-tag-commands	snippets_emu.txt	/*snip-advanced-tag-commands*
 snip-buffer-specific	snippets_emu.txt	/*snip-buffer-specific*
 snip-bundles	snippets_emu.txt	/*snip-bundles*

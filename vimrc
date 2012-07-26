@@ -191,7 +191,9 @@ if has("gui_running")
   set nu
 "  set relativenumber
 else
-  colorscheme zellner
+  set t_Co=256
+  "colorscheme zellner
+  colorscheme solarized
   set background=dark
   set nu
 "  set relativenumber
@@ -696,6 +698,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Line and column highlight
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-hi CursorLine   cterm=NONE ctermbg=DarkBlue
-hi CursorColumn ctermbg=DarkBlue
+"hi CursorLine   cterm=NONE ctermbg=DarkGrey
+"hi CursorColumn ctermbg=DarkGrey
+hi CursorLine   cterm=NONE
 set cursorline cursorcolumn
