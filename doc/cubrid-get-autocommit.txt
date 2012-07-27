@@ -1,0 +1,24 @@
+*cubrid_get_autocommit* -- Get auto-commit mode of the connection
+
+  bool cubrid_get_autocommit(resource conn_identifier)~
+
+The |cubrid_get_autocommit| function is used to get the status of CUBRID
+database connection auto-commit mode.
+
+For CUBRID 8.4.0, auto-commit mode is disabled by default for transaction
+management.
+
+For CUBRID 8.4.1, auto-commit mode is enabled by default for transaction
+management.
+
+{conn_identifier} Connection identifier.
+
+&true;, when auto-commit is on.
+
+&false;, when auto-commit is off.
+
+&null; on error.
+
+|cubrid_set_autocommit| |cubrid_commit|
+
+vim:ft=help:

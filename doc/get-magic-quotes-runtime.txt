@@ -1,0 +1,31 @@
+*get_magic_quotes_runtime* -- Gets the current active configuration setting of
+magic_quotes_runtime
+
+  bool get_magic_quotes_runtime()~
+
+Returns the current active configuration setting of magic_quotes_runtime.
+
+Returns 0 if magic_quotes_runtime is off, 1 otherwise. Or always returns
+&false; as of PHP 5.4.0.
+
+Version Description 5.4.0 Always returns &false; because the magic quotes
+feature was removed from PHP.
+
+|get_magic_quotes_runtime| example
+
+<?php >
+  // Check if magic_quotes_runtime is active
+  if(get_magic_quotes_runtime())
+  {
+      // Deactivate
+      set_magic_quotes_runtime(false);
+  }
+?>
+
+
+
+
+
+|get_magic_quotes_gpc| |set_magic_quotes_runtime|
+
+vim:ft=help:

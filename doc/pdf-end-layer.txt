@@ -1,0 +1,10 @@
+*PDF_end_layer* -- Deactivate all active layers
+
+  bool PDF_end_layer(resource pdfdoc)~
+
+Deactivates all active layers. Returns &true; on success or &false; on
+failure.
+
+This function requires PDF 1.5.
+
+vim:ft=help:

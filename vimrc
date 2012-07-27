@@ -637,6 +637,11 @@ function! JavaScriptFold()
     setl foldtext=FoldText()
 endfunction
 
+""""""""""""""""""""""""""""""
+" => PHP section
+""""""""""""""""""""""""""""""
+au FileType php set keywordprg=:help
+
 
 """"""""""""""""""""""""""""""
 " => MRU plugin

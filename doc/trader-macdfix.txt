@@ -1,0 +1,16 @@
+*trader_macdfix* -- Moving Average Convergence/Divergence Fix 12/26
+
+  array trader_macdfix(array real [, integer signalPeriod])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

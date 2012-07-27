@@ -1,0 +1,14 @@
+*is_infinite* -- Finds whether a value is infinite
+
+  bool is_infinite(float val)~
+
+Returns &true; if {val} is infinite (positive or negative), like the result of
+log(0) or any value too big to fit into a float on this platform.
+
+{val} The value to check
+
+&true; if {val} is infinite, else &false;.
+
+|is_finite| |is_nan|
+
+vim:ft=help:

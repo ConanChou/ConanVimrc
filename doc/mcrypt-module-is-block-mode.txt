@@ -1,0 +1,19 @@
+*mcrypt_module_is_block_mode* -- Returns if the specified mode outputs blocks or
+not
+
+  bool mcrypt_module_is_block_mode(string mode [, string lib_dir])~
+
+This function returns &true; if the mode outputs blocks of bytes or &false; if
+it outputs just bytes. (e.g. &true; for cbc and ecb, and &false; for cfb and
+stream).
+
+{mode} The mode to check.
+
+{lib_dir} The optional {lib_dir} parameter can contain the location where the
+algorithm module is on the system.
+
+This function returns &true; if the mode outputs blocks of bytes or &false; if
+it outputs just bytes. (e.g. &true; for cbc and ecb, and &false; for cfb and
+stream).
+
+vim:ft=help:

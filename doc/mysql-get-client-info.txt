@@ -1,0 +1,28 @@
+*mysql_get_client_info* -- Get MySQL client info
+
+Use of this extension is discouraged. Instead, the MySQLi or PDO_MySQL
+extension should be used. See also MySQL: choosing an API guide and related
+FAQ for more information. Alternatives to this function include:
+
+  string mysql_get_client_info()~
+
+|mysql_get_client_info| returns a string that represents the client library
+version.
+
+The MySQL client version.
+
+|mysql_get_client_info| example
+
+<?php >
+  printf("MySQL client info: %s\n", mysql_get_client_info());
+?>
+
+The above example will output something similar to:
+
+  MySQL client info: 3.23.39
+
+
+
+|mysql_get_host_info| |mysql_get_proto_info| |mysql_get_server_info|
+
+vim:ft=help:

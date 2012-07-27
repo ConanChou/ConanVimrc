@@ -1,0 +1,16 @@
+*trader_cmo* -- Chande Momentum Oscillator
+
+  array trader_cmo(array real [, integer timePeriod])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

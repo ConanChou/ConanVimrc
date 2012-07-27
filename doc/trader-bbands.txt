@@ -1,0 +1,22 @@
+*trader_bbands* -- Bollinger Bands
+
+  array trader_bbands(array real [, integer timePeriod [, float nbDevUp [, float nbDevDn [, integer mAType]]]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

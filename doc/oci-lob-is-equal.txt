@@ -1,0 +1,13 @@
+*oci_lob_is_equal* -- Compares two LOB/FILE locators for equality
+
+  bool oci_lob_is_equal(OCI-Lob lob1, OCI-Lob lob2)~
+
+Compares two LOB/FILE locators.
+
+{lob1} A LOB identifier.
+
+{lob2} A LOB identifier.
+
+Returns &true; if these objects are equal, &false; otherwise.
+
+vim:ft=help:

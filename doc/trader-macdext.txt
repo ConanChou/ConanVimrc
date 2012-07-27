@@ -1,0 +1,26 @@
+*trader_macdext* -- MACD with controllable MA type
+
+  array trader_macdext(array real [, integer fastPeriod [, integer fastMAType [, integer slowPeriod [, integer slowMAType [, integer signalPeriod [, integer signalMAType]]]]]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

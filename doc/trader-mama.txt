@@ -1,0 +1,18 @@
+*trader_mama* -- MESA Adaptive Moving Average
+
+  array trader_mama(array real [, float fastLimit [, float slowLimit]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

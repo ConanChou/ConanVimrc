@@ -1,0 +1,24 @@
+*trader_adosc* -- Chaikin A/D Oscillator
+
+  array trader_adosc(array high, array low, array close, array volume [, integer fastPeriod [, integer slowPeriod]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:
