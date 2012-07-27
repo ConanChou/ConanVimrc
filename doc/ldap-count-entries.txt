@@ -1,0 +1,32 @@
+*ldap_count_entries* -- Count the number of entries in a search
+
+  int ldap_count_entries(resource link_identifier, resource result_identifier)~
+
+Returns the number of entries stored in the result of previous search
+operations.
+
+{link_identifier} An LDAP link identifier, returned by |ldap_connect|.
+
+{result_identifier} The internal LDAP result.
+
+Returns number of entries in the result or &false; on error.
+
+|ldap-count-entries| example Retrieve number of entries in the result.
+
+  // $ds is a valid link identifier (see ldap_connect)
+  
+       $dn        = 'ou=example,dc=org';
+       $filter    = '(|(sn=Doe*)(givenname=John*))';
+       $justthese = array('ou', 'sn', 'givenname', 'mail');
+  
+       $sr = ldap_search($ds, $dn, $filter, $justthese);
+  
+       var_dump(ldap_count_entries($ds, $sr));
+
+The above example will output something similar to:
+
+  int(1)
+
+
+
+vim:ft=help:

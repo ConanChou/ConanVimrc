@@ -1,0 +1,32 @@
+*trader_sarext* -- Parabolic SAR - Extended
+
+  array trader_sarext(array high, array low [, float startValue [, float offsetOnReverse [, float accelerationInitLong [, float accelerationLong [, float accelerationMaxLong [, float accelerationInitShort [, float accelerationShort [, float accelerationMaxShort]]]]]]]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

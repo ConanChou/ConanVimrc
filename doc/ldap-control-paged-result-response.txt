@@ -1,0 +1,20 @@
+*ldap_control_paged_result_response* -- Retrieve the LDAP pagination cookie
+
+  bool ldap_control_paged_result_response(resource link, resource result [, string cookie [, int estimated]])~
+
+Retrieve the pagination information send by the server.
+
+{link} An LDAP link identifier, returned by |ldap_connect|.
+
+{result}
+
+{cookie} An opaque structure sent by the server.
+
+{estimated} The estimated number of entries to retrieve.
+
+Returns &true; on success or &false; on failure.
+
+|ldap_control_paged_result| RFC2696 : LDAP Control Extension for Simple Paged
+Results Manipulation
+
+vim:ft=help:

@@ -1,0 +1,42 @@
+*cubrid_lob2_export* -- Export the lob object to a file.
+
+  bool cubrid_lob2_export(resource lob_identifier, string file_name)~
+
+The |cubrid_lob2_export| function is used to save the contents of BLOB/CLOB
+data to a file. To use this function, you must use |cubrid_lob2_new| or fetch
+a lob object from CUBRID database first. If the file has existed, it will
+fail. This function will not influence the cursor position of the lob object.
+It operates the entire lob object.
+
+{lob_identifier} Lob identifier as a result of |cubrid_lob2_new| or get from
+the result set.
+
+{filename} File name you want to store BLOB/CLOB data. It also supports the
+path of the file.
+
+&true; if the process is successful and &false; for failure.
+
+|cubrid_lob2_export| example
+
+<?php >
+  // Table: test_lob (id INT, contents CLOB)
+  
+  $conn = cubrid_connect("localhost", 33000, "demodb", "public", "");
+  
+  $req = cubrid_prepare($conn, "select * from test_lob");
+  
+  cubrid_move_cursor($req, 3, CUBRID_CURSOR_FIRST);
+  
+  $row = cubrid_fetch($req, CUBRID_NUM | CUBRID_LOB);
+  
+  cubrid_lob2_export($row[1], "doc_3.txt");
+  
+  cubrid_lob2_close($row[1]);
+  cubrid_disconnect($conn);
+?>
+
+
+
+|cubrid_lob2_new| |cubrid_lob2_close| |cubrid_lob2_import| |cubrid_lob2_bind|
+
+vim:ft=help:

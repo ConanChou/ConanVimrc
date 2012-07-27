@@ -1,0 +1,27 @@
+*xmlwriter_start_document* -- Create document tag
+
+Object oriented style
+
+  bool XMLWriter::startDocument([string version [, string encoding [, string standalone]]])~
+
+Procedural style
+
+  bool xmlwriter_start_document([string version [, string encoding [, string standalone, resource xmlwriter [, string version [, string encoding [, string standalone]]]]]])~
+
+Starts a document.
+
+{ xmlwriter}Only for procedural calls. The XMLWriter resource that is being
+modified. This resource comes from a call to |xmlwriter_open_uri| or
+|xmlwriter_open_memory|.
+
+{version} The version number of the document as part of the XML declaration.
+
+{encoding} The encoding of the document as part of the XML declaration.
+
+{standalone} yes or no.
+
+Returns &true; on success or &false; on failure.
+
+XMLWriter::endDocument
+
+vim:ft=help:

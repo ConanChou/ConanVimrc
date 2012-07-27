@@ -1,0 +1,24 @@
+*trader_stochf* -- Stochastic Fast
+
+  array trader_stochf(array high, array low, array close [, integer fastK_Period [, integer fastD_Period [, integer fastD_MAType]]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

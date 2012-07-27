@@ -1,0 +1,22 @@
+*trader_stochrsi* -- Stochastic Relative Strength Index
+
+  array trader_stochrsi(array real [, integer timePeriod [, integer fastK_Period [, integer fastD_Period [, integer fastD_MAType]]]])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

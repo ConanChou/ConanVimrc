@@ -1,0 +1,14 @@
+*trader_exp* -- Vector Arithmetic Exp
+
+  array trader_exp(array real)~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

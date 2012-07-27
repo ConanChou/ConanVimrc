@@ -1,0 +1,34 @@
+*hex2bin* -- Decodes a hexadecimally encoded binary string
+
+  string hex2bin(string data)~
+
+Decodes a hexadecimally encoded binary string.
+
+This function does NOT convert a hexadecimal number to a binary number. This
+can be done using the |base_convert| function.
+
+Hexadecimal representation of data.
+
+Returns the binary representation of the given data or &false; on failure.
+
+If the hexadecimal input string is of odd length an E_WARNING level error is
+thrown.
+
+Version Description 5.4.1 A warning is thrown if the input string is of odd
+length. In PHP 5.4.0 the string was silently accepted, but the last byte was
+truncated.
+
+|hex2bin| example
+
+<?php >
+  $hex = hex2bin("6578616d706c65206865782064617461");
+  var_dump($hex);
+?>
+
+The above example will output something similar to:
+
+  string(16) "example hex data"
+
+|bin2hex| |unpack|
+
+vim:ft=help:

@@ -1,0 +1,16 @@
+*trader_medprice* -- Median Price
+
+  array trader_medprice(array high, array low)~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:

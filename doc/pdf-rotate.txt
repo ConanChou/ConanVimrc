@@ -1,0 +1,8 @@
+*PDF_rotate* -- Rotate coordinate system
+
+  bool PDF_rotate(resource p, float phi)~
+
+Rotates the coordinate system. Returns &true; on success or &false; on
+failure.
+
+vim:ft=help:

@@ -1,0 +1,70 @@
+*finfo::__construct* -- Create a new fileinfo resource
+
+Procedural style
+
+  resource finfo_open([int options [, string magic_file]])~
+
+Object oriented style (constructor):
+
+This function opens a magic database and returns its resource.
+
+{options} One or disjunction of more Fileinfo constants.
+
+{magic_file} Name of a magic database file, usually something like
+/path/to/magic.mime. If not specified, the MAGIC environment variable is used.
+If this variable is not set either, /usr/share/misc/magic is used by default.
+A .mime and/or .mgc suffix is added if needed.
+
+Passing NULL or an empty string will be equivalent to the default value.
+
+(Procedural style only) Returns a magic database resource on success or
+&false; on failure.
+
+As of PHP >= 5.3.11 and >= 5.4.1 the magic datababase format has changed. Due
+to this, the internal mime database was upgraded. This affects especially the
+code where external magic is read in. Reading in magic files of the older
+formats will not work. Also, some textual representations of the mime types
+has changed, for instance for PHP would be "PHP script, ASCII text" instead of
+"PHP script text" returned.
+
+Object oriented style
+
+<?php >
+  $finfo = new finfo(FILEINFO_MIME, "/usr/share/misc/magic"); // return mime type ala mimetype extension
+  
+  /* get mime-type for a specific file */
+  $filename = "/usr/local/something.txt";
+  echo $finfo->file($filename);
+?>
+
+
+
+Procedural style
+
+<?php >
+  $finfo = finfo_open(FILEINFO_MIME, "/usr/share/misc/magic"); // return mime type ala mimetype extension
+  
+  if (!$finfo) {
+      echo "Opening fileinfo database failed";
+      exit();
+  }
+  
+  /* get mime-type for a specific file */
+  $filename = "/usr/local/something.txt";
+  echo finfo_file($finfo, $filename);
+  
+  /* close connection */
+  finfo_close($finfo);
+?>
+
+
+
+The above example will output:
+
+
+
+  text/plain; charset=us-ascii
+
+|finfo_close|
+
+vim:ft=help:

@@ -1,0 +1,18 @@
+*trader_aroon* -- Aroon
+
+  array trader_aroon(array high, array low [, integer timePeriod])~
+
+
+
+This function is currently not documented; only its argument list is
+available.
+
+
+
+
+
+
+
+Returns an array with calculated data or false on failure.
+
+vim:ft=help:
