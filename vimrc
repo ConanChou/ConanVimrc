@@ -70,6 +70,8 @@
 "
 "     > Gist.vim - https://github.com/mattn/gist-vim
 "       vimscript for gist 
+"     
+"     > PhpDoc.vim
 "
 "  Revisions:
 "     > 0.1: Create the repo, a copy from my Ubuntu
@@ -702,3 +704,4 @@ endif
 "hi CursorColumn ctermbg=DarkGrey
 hi CursorLine   cterm=NONE
 set cursorline cursorcolumn
+
