@@ -84,7 +84,6 @@
 :NeoComplCacheUnlock	neocomplcache.txt	/*:NeoComplCacheUnlock*
 :NeoComplCacheUnlockSource	neocomplcache.txt	/*:NeoComplCacheUnlockSource*
 :Rvm	rvm.txt	/*:Rvm*
-:Snippet	snippets_emu.txt	/*:Snippet*
 :TlistAddFiles	taglist.txt	/*:TlistAddFiles*
 :TlistAddFilesRecursive	taglist.txt	/*:TlistAddFilesRecursive*
 :TlistClose	taglist.txt	/*:TlistClose*
@@ -103,8 +102,6 @@
 :TlistUpdate	taglist.txt	/*:TlistUpdate*
 <Plug>(neocomplcache_start_quick_match)	neocomplcache.txt	/*<Plug>(neocomplcache_start_quick_match)*
 <Plug>(neocomplcache_start_unite_complete)	neocomplcache.txt	/*<Plug>(neocomplcache_start_unite_complete)*
-CreateBundleSnippet	snippets_emu.txt	/*CreateBundleSnippet*
-CreateSnippet	snippets_emu.txt	/*CreateSnippet*
 ExtractSnips()	snipMate.txt	/*ExtractSnips()*
 ExtractSnipsFile()	snipMate.txt	/*ExtractSnipsFile()*
 Filename()	snipMate.txt	/*Filename()*
@@ -478,7 +475,6 @@ base64_decode	base64-decode.txt	/*base64_decode*
 base64_encode	base64-encode.txt	/*base64_encode*
 base_convert	base-convert.txt	/*base_convert*
 basename	basename.txt	/*basename*
-basic-snippet	snippets_emu.txt	/*basic-snippet*
 bbcode_add_element	bbcode-add-element.txt	/*bbcode_add_element*
 bbcode_add_smiley	bbcode-add-smiley.txt	/*bbcode_add_smiley*
 bbcode_create	bbcode-create.txt	/*bbcode_create*
@@ -720,7 +716,6 @@ crack_getlastmessage	crack-getlastmessage.txt	/*crack_getlastmessage*
 crack_opendict	crack-opendict.txt	/*crack_opendict*
 crc32	crc32.txt	/*crc32*
 create_function	create-function.txt	/*create_function*
-creating-snippets	snippets_emu.txt	/*creating-snippets*
 crypt	crypt.txt	/*crypt*
 cs	surround.txt	/*cs*
 ctype_alnum	ctype-alnum.txt	/*ctype_alnum*
@@ -2892,7 +2887,6 @@ mysqlnd_qc_set_user_handlers	mysqlnd-qc-set-user-handlers.txt	/*mysqlnd_qc_set_u
 mysqlnd_uh_convert_to_mysqlnd	mysqlnd-uh-convert-to-mysqlnd.txt	/*mysqlnd_uh_convert_to_mysqlnd*
 mysqlnd_uh_set_connection_proxy	mysqlnd-uh-set-connection-proxy.txt	/*mysqlnd_uh_set_connection_proxy*
 mysqlnd_uh_set_statement_proxy	mysqlnd-uh-set-statement-proxy.txt	/*mysqlnd_uh_set_statement_proxy*
-named-tags	snippets_emu.txt	/*named-tags*
 natcasesort	natcasesort.txt	/*natcasesort*
 natsort	natsort.txt	/*natsort*
 ncurses_addch	ncurses-addch.txt	/*ncurses_addch*
@@ -3963,21 +3957,6 @@ sin	sin.txt	/*sin*
 sinh	sinh.txt	/*sinh*
 sizeof	sizeof.txt	/*sizeof*
 sleep	sleep.txt	/*sleep*
-snip-advanced-tag-commands	snippets_emu.txt	/*snip-advanced-tag-commands*
-snip-buffer-specific	snippets_emu.txt	/*snip-buffer-specific*
-snip-bundles	snippets_emu.txt	/*snip-bundles*
-snip-contact-details	snippets_emu.txt	/*snip-contact-details*
-snip-contributors	snippets_emu.txt	/*snip-contributors*
-snip-detailed-explanations	snippets_emu.txt	/*snip-detailed-explanations*
-snip-elem-delimiter	snippets_emu.txt	/*snip-elem-delimiter*
-snip-ftplugin	snippets_emu.txt	/*snip-ftplugin*
-snip-limitations	snippets_emu.txt	/*snip-limitations*
-snip-menu	snippets_emu.txt	/*snip-menu*
-snip-remap-key	snippets_emu.txt	/*snip-remap-key*
-snip-snippet-commands	snippets_emu.txt	/*snip-snippet-commands*
-snip-special-vars	snippets_emu.txt	/*snip-special-vars*
-snip-start-end-tags	snippets_emu.txt	/*snip-start-end-tags*
-snip-tag-name-syntax	snippets_emu.txt	/*snip-tag-name-syntax*
 snipMate	snipMate.txt	/*snipMate*
 snipMate-$#	snipMate.txt	/*snipMate-$#*
 snipMate-${#:}	snipMate.txt	/*snipMate-${#:}*
@@ -3997,14 +3976,8 @@ snipMate-settings	snipMate.txt	/*snipMate-settings*
 snipMate-usage	snipMate.txt	/*snipMate-usage*
 snipMate.txt	snipMate.txt	/*snipMate.txt*
 snippet	snipMate.txt	/*snippet*
-snippet-commands	snippets_emu.txt	/*snippet-commands*
 snippet-syntax	snipMate.txt	/*snippet-syntax*
 snippets	snipMate.txt	/*snippets*
-snippets_emu-bugs	snippets_emu.txt	/*snippets_emu-bugs*
-snippets_emu-features	snippets_emu.txt	/*snippets_emu-features*
-snippets_emu-options	snippets_emu.txt	/*snippets_emu-options*
-snippets_emu-troubleshooting	snippets_emu.txt	/*snippets_emu-troubleshooting*
-snippets_emu.txt	snippets_emu.txt	/*snippets_emu.txt*
 snmp2_get	snmp2-get.txt	/*snmp2_get*
 snmp2_getnext	snmp2-getnext.txt	/*snmp2_getnext*
 snmp2_real_walk	snmp2-real-walk.txt	/*snmp2_real_walk*

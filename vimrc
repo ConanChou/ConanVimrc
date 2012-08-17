@@ -599,7 +599,7 @@ map <leader>s? z=
 " => Python section
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
-autocmd FileType python set complete+=k~/.vim_runtime/syntax/python3.0.vim isk+=.,(
+autocmd FileType python set complete+=k~/.vim_runtime/syntax/python3.0.vim "isk+=.,(
 au FileType python syn keyword pythonDecorator True None False self
 
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
