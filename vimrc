@@ -71,6 +71,8 @@
 "
 "     > Gist.vim - https://github.com/mattn/gist-vim
 "       vimscript for gist 
+"     
+"     > PhpDoc.vim
 "
 "  Revisions:
 "     > 0.1: Create the repo, a copy from my Ubuntu
@@ -786,3 +788,4 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "hi CursorColumn ctermbg=DarkGrey
 hi CursorLine   cterm=NONE
 set cursorline cursorcolumn
+
