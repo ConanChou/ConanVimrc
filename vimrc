@@ -202,7 +202,7 @@ if has("gui_running")
   set guioptions-=T
   set guioptions-=e
   set t_Co=256
-  set guitablabel=%M\ %t
+  "set guitablabel=%M\ %t
   colorscheme solarized
   set background=dark
   set nu
@@ -454,10 +454,10 @@ catch
 endtry
 
 " Return to last edit position (You want this!) *N*
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+"autocmd BufReadPost *
+"     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+"     \   exe "normal! g`\"" |
+"     \ endif
 
 
 "Remeber open buffers on close
@@ -834,7 +834,7 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif " auto open when start with no file
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -843,3 +843,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" remove the tabline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set showtabline=0
