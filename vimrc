@@ -39,7 +39,7 @@
 "    
 "    -> neocomplcache
 "    -> CursorLine and ColumnLine
-"
+"    -> NERDTree
 " Plugins_Included:
 "     > minibufexpl.vim - http://www.vim.org/scripts/script.php?script_id=159
 "       Makes it easy to get an overview of buffers:
@@ -132,6 +132,8 @@ else
     autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
 endif
 
+source $VIMRUNTIME/mswin.vim
+behave mswin
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -789,3 +791,12 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 hi CursorLine   cterm=NONE
 set cursorline cursorcolumn
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
+
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
