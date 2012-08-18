@@ -1,10 +1,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Conan
-"             http://conanblog.me - conanblog.me
+"             http://conanblog.me
 " 
 " Based_on: http://amix.dk/vim/vimrc.html
 " 
-" Version: 0.1
+" Version: 1.1
 "
 " How_to_Install_on_Unix:
 "    $ mkdir ~/.vim_runtime
@@ -36,7 +36,8 @@
 "    -> Omni complete functions
 "    -> Python section
 "    -> JavaScript section
-"    
+"    -> CoffeeScript section
+"    -> YankRing
 "    -> neocomplcache
 "    -> CursorLine and ColumnLine
 "    -> NERDTree
@@ -141,7 +142,16 @@ behave mswin
 " Set 7 lines to the curors - when moving vertical..
 set so=7
 
-set wildmenu "Turn on WiLd menu
+"Turn on WiLd menu
+set wildmenu 
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+else
+    set wildignore+=.git\*,.hg\*,.svn\*
+endif
 
 set ruler "Always show current position
 
@@ -159,12 +169,12 @@ set smartcase
 set hlsearch "Highlight search things
 
 set incsearch "Make search act like search in modern browsers
-set nolazyredraw "Don't redraw while executing macros 
+set lazyredraw "Don't redraw while executing macros 
 
 set magic "Set magic on, for regular expressions
 
 set showmatch "Show matching bracets when text indicator is over them
-set mat=2 "How many tenths of a second to blink
+set mat=1 "How many tenths of a second to blink
 
 " No sound on errors
 set noerrorbells
@@ -190,7 +200,9 @@ endif
 
 if has("gui_running")
   set guioptions-=T
+  set guioptions-=e
   set t_Co=256
+  set guitablabel=%M\ %t
   colorscheme solarized
   set background=dark
   set nu
@@ -269,8 +281,8 @@ set foldlevel=1         "this is just what i use
 " NOTICE: Really useful!
 
 "  In visual mode when you press * or # to search for the current selection
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
+vnoremap <silent> * :call VisualSelection('f', '')<CR>
+vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
 " When you press gv you vimgrep after the selected text
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
@@ -312,7 +324,15 @@ function! VisualSelection(direction) range
     let @" = l:saved_reg
 endfunction
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Turn persistent undo on
+" means that you can undo even when you close a buffer/VIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
+    set undofile
+catch
+endtry
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command mode related
@@ -434,14 +454,14 @@ catch
 endtry
 
 " Return to last edit position (You want this!) *N*
-"autocmd BufReadPost *
-"     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-"     \   exe "normal! g`\"" |
-"     \ endif
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
 
 
 "Remeber open buffers on close
-"set viminfo^=%
+set viminfo^=%
 
 
 """"""""""""""""""""""""""""""
@@ -533,9 +553,7 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
-
-set guitablabel=%t
-
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cope
@@ -643,6 +661,25 @@ function! JavaScriptFold()
 endfunction
 
 """"""""""""""""""""""""""""""
+" => CoffeeScript section
+"""""""""""""""""""""""""""""""
+function! CoffeeScriptFold()
+    setl foldmethod=indent
+    setl foldlevelstart=1
+endfunction
+au FileType coffee call CoffeeScriptFold()
+
+""""""""""""""""""""""""""""""
+" => YankRing
+""""""""""""""""""""""""""""""
+if has("win16") || has("win32")
+" Don't do anything
+else
+    let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
+endif
+
+
+""""""""""""""""""""""""""""""
 " => PHP section
 """"""""""""""""""""""""""""""
 au FileType php set keywordprg=:help
@@ -676,7 +713,6 @@ let g:github_token = '7052a94413969d07296def10754c70f2'
 """"""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -800,3 +836,10 @@ map <leader>nf :NERDTreeFind<cr>
 
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => surround.vim config
+" Annotate strings with gettext http://amix.dk/blog/post/19678
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap Si S(i_<esc>f)
+au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
