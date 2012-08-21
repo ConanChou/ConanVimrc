@@ -133,9 +133,6 @@ else
     autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
 endif
 
-source $VIMRUNTIME/mswin.vim
-behave mswin
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -199,6 +196,9 @@ elseif MySys() == "linux"
 endif
 
 if has("gui_running")
+  source $VIMRUNTIME/mswin.vim
+  behave mswin
+
   set guioptions-=T
   set guioptions-=e
   set t_Co=256
