@@ -4,3 +4,4 @@
 *.log
 Makefile
 temp_dirs/*
+*~

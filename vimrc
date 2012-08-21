@@ -41,6 +41,7 @@
 "    -> neocomplcache
 "    -> CursorLine and ColumnLine
 "    -> NERDTree
+"    -> octopress
 " Plugins_Included:
 "     > minibufexpl.vim - http://www.vim.org/scripts/script.php?script_id=159
 "       Makes it easy to get an overview of buffers:
@@ -206,6 +207,8 @@ if has("gui_running")
   colorscheme solarized
   set background=dark
   set nu
+  source $VIMRUNTIME/mswin.vim
+  behave mswin
 "  set relativenumber
 else
   set t_Co=256
@@ -836,6 +839,12 @@ map <leader>nf :NERDTreeFind<cr>
 
 "autocmd vimenter * if !argc() | NERDTree | endif " auto open when start with no file
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" octopress
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=octopress
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
