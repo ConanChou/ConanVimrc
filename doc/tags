@@ -294,6 +294,9 @@ PDF_translate	pdf-translate.txt	/*PDF_translate*
 PDF_utf16_to_utf8	pdf-utf16-to-utf8.txt	/*PDF_utf16_to_utf8*
 PDF_utf32_to_utf16	pdf-utf32-to-utf16.txt	/*PDF_utf32_to_utf16*
 PDF_utf8_to_utf16	pdf-utf8-to-utf16.txt	/*PDF_utf8_to_utf16*
+ReloadAllSnippets()	snipMate.txt	/*ReloadAllSnippets()*
+ReloadSnippets()	snipMate.txt	/*ReloadSnippets()*
+ResetAllSnippets()	snipMate.txt	/*ResetAllSnippets()*
 ResetSnippets()	snipMate.txt	/*ResetSnippets()*
 SQLiteDatabase::arrayQuery	sqlite-array-query.txt	/*SQLiteDatabase::arrayQuery*
 SQLiteDatabase::busyTimeout	sqlite-busy-timeout.txt	/*SQLiteDatabase::busyTimeout*
@@ -3970,6 +3973,7 @@ snipMate-expandtab	snipMate.txt	/*snipMate-expandtab*
 snipMate-features	snipMate.txt	/*snipMate-features*
 snipMate-filename	snipMate.txt	/*snipMate-filename*
 snipMate-indenting	snipMate.txt	/*snipMate-indenting*
+snipMate-license	snipMate.txt	/*snipMate-license*
 snipMate-placeholders	snipMate.txt	/*snipMate-placeholders*
 snipMate-remap	snipMate.txt	/*snipMate-remap*
 snipMate-settings	snipMate.txt	/*snipMate-settings*

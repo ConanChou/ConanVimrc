@@ -843,7 +843,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " octopress
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=octopress
+"autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=octopress
+au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
