@@ -28,3 +28,6 @@
 [submodule "bundle/py.test"]
 	path = bundle/py.test
 	url = https://github.com/alfredodeza/pytest.vim.git
+[submodule "bundle/minibufexpl.vim"]
+    path = bundle/minibufexpl
+    url = https://github.com/sontek/minibufexpl.vim.git
