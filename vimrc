@@ -42,6 +42,15 @@
 "    -> CursorLine and ColumnLine
 "    -> NERDTree
 "    -> octopress
+"    -> TaskList
+"    -> Gundo
+"    -> PEP8
+"    -> PyDoc
+"    -> Rope.vim
+"    -> Ack
+"    -> MakeGreen
+"    -> py.test
+"
 " Plugins_Included:
 "     > minibufexpl.vim - http://www.vim.org/scripts/script.php?script_id=159
 "       Makes it easy to get an overview of buffers:
@@ -461,7 +470,7 @@ endtry
 
 
 "Remeber open buffers on close
-set viminfo^=%
+"set viminfo^=%
 
 
 """"""""""""""""""""""""""""""
@@ -635,6 +644,18 @@ au FileType python map <buffer> <leader>C ?class
 au FileType python map <buffer> <leader>D ?def 
 
 au FileType python map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+
+" Add the virtualenv's site-packages to vim path
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
@@ -840,8 +861,55 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " octopress
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=octopress
+autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=mkd.octopress
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TaskList
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>td <Plug>TaskList
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Gundo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>gu :GundoToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PEP8
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pep8_map='<leader>8'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PyDoc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set completeopt=menuone,longest,preview
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Rope.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>gd :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ack
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>a <Esc>:Ack!
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MakeGreen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" py.test
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Execute the tests
+nmap <silent><Leader>tf <Esc>:Pytest file<CR>
+nmap <silent><Leader>tc <Esc>:Pytest class<CR>
+nmap <silent><Leader>tm <Esc>:Pytest method<CR>
+" cycle through test errors
+nmap <silent><Leader>tn <Esc>:Pytest next<CR>
+nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
+nmap <silent><Leader>te <Esc>:Pytest error<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
