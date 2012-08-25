@@ -143,6 +143,9 @@ else
     autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
 endif
 
+" change to current file directory
+nnoremap <leader>cd :cd %:p:h<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -211,6 +214,7 @@ if has("gui_running")
 
   set guioptions-=T
   set guioptions-=e
+  set guioptions-=r
   set t_Co=256
   "set guitablabel=%M\ %t
   colorscheme solarized
@@ -471,10 +475,8 @@ endtry
 "     \   exe "normal! g`\"" |
 "     \ endif
 
-
 "Remeber open buffers on close
-"set viminfo^=%
-
+set viminfo^=%
 
 """"""""""""""""""""""""""""""
 " => Statusline
@@ -864,7 +866,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " octopress
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=mkd.octopress
+autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=html.mkd.octopress
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TaskList
