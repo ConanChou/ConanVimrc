@@ -28,9 +28,6 @@
 [submodule "bundle/py.test"]
 	path = bundle/py.test
 	url = https://github.com/alfredodeza/pytest.vim.git
-[submodule "bundle/minibufexpl.vim"]
-    path = bundle/minibufexpl.vim
-    url = https://github.com/sontek/minibufexpl.vim.git
 [submodule "bundle/neocomplcache"]
     path = bundle/neocomplcache
     url = https://github.com/Shougo/neocomplcache.git
@@ -64,3 +61,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/minibufexpl.vim"]
+	path = bundle/minibufexpl.vim
+	url = https://github.com/sontek/minibufexpl.vim.git
