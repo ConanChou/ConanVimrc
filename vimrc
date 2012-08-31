@@ -224,10 +224,10 @@ if has("gui_running")
   behave mswin
 "  set relativenumber
 else
-  colorscheme zellner
-  "colorscheme solarized
-  set background=dark
+  "colorscheme zellner
   set t_Co=256
+  colorscheme solarized
+  set background=dark
   set nu
 "  set relativenumber
 endif
@@ -851,7 +851,7 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "hi CursorLine   cterm=NONE ctermbg=DarkGrey
 "hi CursorColumn ctermbg=DarkGrey
 set cursorline cursorcolumn
-hi CursorLine   cterm=NONE ctermbg=DarkGrey
+hi CursorLine   cterm=NONE ctermbg=black
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
