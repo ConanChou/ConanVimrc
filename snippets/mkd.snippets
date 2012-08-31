@@ -1,0 +1,30 @@
+snippet cb
+	{% codeblock lang:${1:python }%}
+	${2}
+	{% endcodeblock %}${3}
+snippet gist
+	{% gist ${1:id }${2:File Name }%}${3}
+snippet ilc
+	`${1}`{:lang="${2:python}"}${3}
+snippet math
+	$$${1}$$${2}
+snippet draft
+	published: false${1}
+snippet more
+	<!--more-->${1}
+snippet inc
+	{% include_code ${2:[title] }${1:path/to/file} %}${3}
+snippet vid
+	{% video ${1:url/to/video}${2: [width height]}${3: [url/to/poster]} %}${4}
+snippet img
+	{% img ${1:left right or blank }${2:/path/to/image} ${3:[width] }${4:[height] }${5:title text }${6:alt text }%}${7}
+snippet bq
+	{% blockquote ${2:[author[, source]] }${3:[link] }${4:[source_link_title] }%}
+	${1:Quote string}
+	{% endblockquote %}${5}
+snippet pq
+	{% pullquote ${2:left }%}
+	{"${1:pull quote}"}
+	{% endpullquote %}${3}
+snippet part
+	{% render_partial ${1:path/to/file }%}${2}
