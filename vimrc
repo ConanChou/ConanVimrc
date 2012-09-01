@@ -100,11 +100,11 @@ let g:Powerline_symbols = 'fancy'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape in different modes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if MySys() == 'linux' && has("autocmd")
-    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-    au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-endif
+"if MySys() == 'linux' && has("autocmd")
+"    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+"    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+"    au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+"endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -216,6 +216,7 @@ if has("gui_running")
   set guioptions-=e
   set guioptions-=r
   set t_Co=256
+  let g:solarized_termcolors=256
   "set guitablabel=%M\ %t
   colorscheme solarized
   set background=dark
@@ -224,10 +225,10 @@ if has("gui_running")
   behave mswin
 "  set relativenumber
 else
-  colorscheme zellner
-  "colorscheme solarized
-  set background=dark
+  "colorscheme zellner
+  colorscheme solarized
   set t_Co=256
+  set background=dark
   set nu
 "  set relativenumber
 endif
