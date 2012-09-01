@@ -100,7 +100,7 @@ let g:Powerline_symbols = 'fancy'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape in different modes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("autocmd")
+if MySys() == 'linux' && has("autocmd")
     au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
     au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
     au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
@@ -485,33 +485,33 @@ set viminfo^=%
 set laststatus=2
 
 "Git branch
-function! GitBranch()
-    try
-        let branch = system("git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'")
-    catch
-        return ''
-    endtry
-
-    if branch != ''
-        return '   Git Branch: ' . substitute(branch, '\n', '', 'g')
-    en
-
-    return ''
-endfunction
-
-function! CurDir()
-    return substitute(getcwd(), '/Users/amir/', "~/", "g")
-endfunction
-
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
-
-" Format the statusline
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L%{GitBranch()}
+"function! GitBranch()
+"    try
+"        let branch = system("git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'")
+"    catch
+"        return ''
+"    endtry
+"
+"    if branch != ''
+"        return '   Git Branch: ' . substitute(branch, '\n', '', 'g')
+"    en
+"
+"    return ''
+"endfunction
+"
+"function! CurDir()
+"    return substitute(getcwd(), '/Users/amir/', "~/", "g")
+"endfunction
+"
+"function! HasPaste()
+"    if &paste
+"        return 'PASTE MODE  '
+"    en
+"    return ''
+"endfunction
+"
+"" Format the statusline
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L%{GitBranch()}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket expanding
@@ -851,7 +851,8 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "hi CursorLine   cterm=NONE ctermbg=DarkGrey
 "hi CursorColumn ctermbg=DarkGrey
 set cursorline cursorcolumn
-hi CursorLine   cterm=NONE ctermbg=DarkGrey
+hi CursorLine   cterm=NONE ctermbg=black
+hi CursorColumn cterm=NONE ctermbg=black
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
