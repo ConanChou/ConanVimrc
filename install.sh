@@ -5,6 +5,7 @@ if [ "$1" == "" ]; then
   echo "      - where <system> can be 'mac', 'linux' or 'windows'"
   exit 1
 fi
+mkdir -p ~/.vim_runtime/temp_dirs
 echo '
 fun! MySys()
    return "$1"
