@@ -664,6 +664,15 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 """"""""""""""""""""""""""""""
+" => Java section
+"""""""""""""""""""""""""""""""
+autocmd FileType java set makeprg=javac\ %
+set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
+map <F9> :make<Return>:copen<Return>
+map <F10> :cprevious<Return>
+map <F11> :cnext<Return>
+
+""""""""""""""""""""""""""""""
 " => JavaScript section
 """""""""""""""""""""""""""""""
 au FileType javascript call JavaScriptFold()
@@ -929,3 +938,20 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " remove the tabline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set showtabline=0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>df :call DistractionFreeWriting()<CR>
+function! DistractionFreeWriting()
+    colorscheme iawriter
+    set background=light
+    set gfn=Cousine:h14                " font to use
+    set lines=40 columns=100           " size of the editable area
+    set fuoptions=background:#00f5f6f6 " macvim specific setting for editor's background color 
+    set guioptions-=r                  " remove right scrollbar
+    set laststatus=0                   " don't show status line
+    set noruler                        " don't show ruler
+    set fullscreen                     " go to fullscreen editing mode
+    set linebreak                      " break the lines on words
+endfunction
