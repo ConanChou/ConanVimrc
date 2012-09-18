@@ -1,8 +1,12 @@
-ConanVimrc v 1.1
+ConanVimrc v 1.3
 
-Maintainer: conanchou
+Maintainer: Conan 
 
-# How to use
+# Screen shot
+
+![Screen shot](https://xiil8w.blu.livefilestore.com/y1psxjrQXZ6JdWymbitNvNXBvPH8A44bGZUv48xy51LULFtXnw8nDGx8FMgupx3sVmlAOCOieqfBtKs8zPgrysve5qKJmNJ3r2F/ConanVimrc.png?psid=1)
+
+## How to use
 
 - Clone the project to your `Home` directory (or simply download the zip/tar file, and extract to your `Home` directory)
 
@@ -33,4 +37,9 @@ $ ruby extconf.rb
 $ make
 ```
 
-For more info please read vimrc file in this folder
+So you want to know what features I have included? You will definitely want to check out the `vimrc` file. Those are all the settings I have made. And it is well documented I guess. 
+
+## Trouble shooting 
+
+- If the status line is not showing correctly, you may need to install one of the font from this page: <https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts>
+- If you cannot get the command-T compiled. Make sure you are using ruby 1.8.7. The default ruby version come with MacOS should be fine. So you don't really need a rvm.
