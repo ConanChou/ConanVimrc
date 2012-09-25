@@ -32,7 +32,7 @@ $ git submodule foreach git submodule update
 
 # compile command-T extension
 $ cd ~/.vim_runtime/bundle/command-t/ruby/command-t
-$ rvm use 1.8.7 # make sure you installed RVM before running this command
+$ rvm use 1.8.7 # make sure you installed RVM before running this command; and if you are using Mac OS X, the default ruby version is 1.8.7, so you can skip this step.
 $ ruby extconf.rb
 $ make
 ```

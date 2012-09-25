@@ -82,11 +82,8 @@
 "
 "     > Gist.vim - https://github.com/mattn/gist-vim
 "       vimscript for gist 
-"     
-"     > PhpDoc.vim
 "
-"  Revisions:
-"     > 0.1: Create the repo, a copy from my Ubuntu
+"     > check the `.gitmodules` file for more
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -313,7 +310,7 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 
 "
 " From an idea by Michael Naumann
-" 
+"
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
