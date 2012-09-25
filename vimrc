@@ -82,11 +82,8 @@
 "
 "     > Gist.vim - https://github.com/mattn/gist-vim
 "       vimscript for gist 
-"     
-"     > PhpDoc.vim
 "
-"  Revisions:
-"     > 0.1: Create the repo, a copy from my Ubuntu
+"     > check the `.gitmodules` file for more
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -313,7 +310,7 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 
 "
 " From an idea by Michael Naumann
-" 
+"
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
@@ -883,6 +880,7 @@ autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=html.mkd.octopress
 " TaskList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>td <Plug>TaskList
+let g:tlTokenList = ['TODO', 'HACK', 'FIXME', 'XXX']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gundo
@@ -955,3 +953,9 @@ function! DistractionFreeWriting()
     set fullscreen                     " go to fullscreen editing mode
     set linebreak                      " break the lines on words
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" highlight tabs and trailing spaces
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set listchars=tab:→\ ,trail:·
+set list
