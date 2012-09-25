@@ -883,6 +883,7 @@ autocmd BufNewFile,BufRead *.markdown,*.textile set filetype=html.mkd.octopress
 " TaskList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>td <Plug>TaskList
+let g:tlTokenList = ['TODO', 'HACK', 'FIXME', 'XXX']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gundo
@@ -955,3 +956,9 @@ function! DistractionFreeWriting()
     set fullscreen                     " go to fullscreen editing mode
     set linebreak                      " break the lines on words
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" highlight tabs and trailing spaces
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set listchars=tab:→\ ,trail:·
+set list
