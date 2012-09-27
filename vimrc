@@ -4,7 +4,7 @@
 " 
 " Based_on: http://amix.dk/vim/vimrc.html
 " 
-" Version: 1.1
+" Version: 1.3
 "
 " How_to_Install_on_Unix:
 "    $ mkdir ~/.vim_runtime
