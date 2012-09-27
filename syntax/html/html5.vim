@@ -57,3 +57,4 @@ syn match   htmlArg "\<\(data(\-[a-z]\+)\+\)=" contained
 " Microdata
 " http://dev.w3.org/html5/md/
 syn keyword htmlArg contained itemid itemscope itemtype itemprop itemref
+

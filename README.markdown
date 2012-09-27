@@ -2,7 +2,7 @@ ConanVimrc v 1.3
 
 Maintainer: Conan
 
-# Screen shot
+## Screen shot
 
 ![Screen shot](https://xiil8w.blu.livefilestore.com/y1psxjrQXZ6JdWymbitNvNXBvPH8A44bGZUv48xy51LULFtXnw8nDGx8FMgupx3sVmlAOCOieqfBtKs8zPgrysve5qKJmNJ3r2F/ConanVimrc.png?psid=1)
 
