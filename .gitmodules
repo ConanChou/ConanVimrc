@@ -70,3 +70,12 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/VimOrganizer"]
+	path = bundle/VimOrganizer
+	url = https://github.com/hsitz/VimOrganizer.git
+[submodule "bundle/NrrwRgn"]
+	path = bundle/NrrwRgn
+	url = https://github.com/chrisbra/NrrwRgn.git
+[submodule "bundle/url.vim"]
+	path = bundle/url.vim
+	url = https://github.com/vim-scripts/utl.vim.git
