@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/conan/.vim_runtime'
 let g:netrw_dirhist_2='/home/conan/Documents/Resume-Latex/.git'
 let g:netrw_dirhist_3='/home/conan/.oh-my-zsh'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/home/conan/Desktop'
 let g:netrw_dirhist_5='/home/conan/workspace/ididthese'
 let g:netrw_dirhist_6='/home/conan/workspace/ididthese/ididthese'
 let g:netrw_dirhist_7='/home/conan/workspace/AWSSDKforPHP'
+let g:netrw_dirhist_8='/home/conan/Dropbox/POLY/CS9053.1124.JAVA/Homework/hw05'
+let g:netrw_dirhist_9='/home/conan/.vim_runtime'

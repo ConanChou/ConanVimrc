@@ -4,7 +4,7 @@
 " 
 " Based_on: http://amix.dk/vim/vimrc.html
 " 
-" Version: 1.1
+" Version: 1.3
 "
 " How_to_Install_on_Unix:
 "    $ mkdir ~/.vim_runtime
@@ -406,8 +406,8 @@ endfunc
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Useful when moving accross long lines
-map j gj
-map k gk
+"map j gj
+"map k gk
 
 " Map space to / (search) and c-space to ? (backgwards search)
 map <space> /
@@ -963,7 +963,7 @@ set list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Zen Coding Key Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:user_zen_leader_key = '<c-i>'
+let g:user_zen_leader_key = '<c-m>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VimOrganizer
@@ -990,7 +990,7 @@ let g:org_todo_setup='TODO | DONE'
 "let g:org_todo_setup='TODO NEXT STARTED | DONE CANCELED'
 
 " include a tags setup string if you want:
-let g:org_tags_alist='{@home(h) @work(w) @tennisclub(t)} {easy(e) hard(d)} {computer(c) phone(p)}'
+let g:org_tags_alist='{@school(s) @work(w) @home(h) @hack(k)} {easy(e) hard(d)}'
 "
 " g:org_agenda_dirs specify directories that, along with
 " their subtrees, are searched for list of .org files when
@@ -1000,8 +1000,8 @@ let g:org_tags_alist='{@home(h) @work(w) @tennisclub(t)} {easy(e) hard(d)} {comp
 " in current Vim instance:
 " Below is line I use in my Windows install:
 " NOTE: case sensitive even on windows.
-let g:org_agenda_select_dirs=["/home/conan/org"]
-let g:org_agenda_files = split(glob("/home/conan/org/org-mod*.org"),"\n")
+let g:org_agenda_select_dirs=["~/desktop/org_files"]
+let g:org_agenda_files = split(glob("~/desktop/org_files/org-mod*.org"),"\n")
 
 " ----------------------
 " Emacs setup

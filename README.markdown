@@ -1,6 +1,6 @@
 ConanVimrc v 1.3
 
-Maintainer: Conan 
+Maintainer: Conan
 
 ## Screen shot
 
@@ -41,5 +41,5 @@ So you want to know what features I have included? You will definitely want to c
 
 ## Trouble shooting 
 
-- If the status line is not showing correctly, you may need to install one of the font from this page: <https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts>
+- If the status line is not showing correctly, you may need to install one of the fonts from this page: <https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts>
 - If you cannot get the command-T compiled. Make sure you are using ruby 1.8.7. The default ruby version come with MacOS should be fine. So you don't really need a rvm.

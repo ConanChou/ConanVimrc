@@ -76,6 +76,6 @@
 [submodule "bundle/NrrwRgn"]
 	path = bundle/NrrwRgn
 	url = https://github.com/chrisbra/NrrwRgn.git
-[submodule "bundle/url.vim"]
-	path = bundle/url.vim
+[submodule "bundle/utl.vim"]
+	path = bundle/utl.vim
 	url = https://github.com/vim-scripts/utl.vim.git
