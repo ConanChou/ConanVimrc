@@ -406,8 +406,8 @@ endfunc
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Useful when moving accross long lines
-map j gj
-map k gk
+"map j gj
+"map k gk
 
 " Map space to / (search) and c-space to ? (backgwards search)
 map <space> /
@@ -990,7 +990,7 @@ let g:org_todo_setup='TODO | DONE'
 "let g:org_todo_setup='TODO NEXT STARTED | DONE CANCELED'
 
 " include a tags setup string if you want:
-let g:org_tags_alist='{@home(h) @work(w) @tennisclub(t)} {easy(e) hard(d)} {computer(c) phone(p)}'
+let g:org_tags_alist='{@school(s) @work(w) @home(h) @hack(k)} {easy(e) hard(d)}'
 "
 " g:org_agenda_dirs specify directories that, along with
 " their subtrees, are searched for list of .org files when
