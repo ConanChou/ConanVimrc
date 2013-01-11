@@ -731,6 +731,8 @@ map <leader>f :MRU<CR>
 let g:CommandTMaxHeight = 15
 set wildignore+=*.o,*.obj,.git,*.pyc
 noremap <leader>y :CommandTFlush<cr>
+nnoremap <silent> <Leader>tt :CommandT<CR>
+nnoremap <silent> <Leader>bb :CommandTBuffer<CR>
 "noremap! <leader>j :PeepOpen<cr>
 
 """"""""""""""""""""""""""""""
@@ -1135,3 +1137,7 @@ function! Org_after_todo_state_change_hook(line,state1, state2)
         " \ ' [' . org#Timestamp() . ']'
         "call append(line("."), repeat(' ',len(matchstr(getline(line(".")),'^\s*'))) . str)
 endfunction
+
+let g:VimuxOrientation = "h"
+let VimuxUseNearestPane = 1
+
