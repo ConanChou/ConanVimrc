@@ -103,6 +103,15 @@ let g:Powerline_symbols = 'fancy'
 "    au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
 "endif
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" golang settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=/usr/local/go/misc/vim
+filetype plugin indent on
+syntax on
+au BufNewFile,BufRead *.go set ft=go
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1141,3 +1150,6 @@ endfunction
 let g:VimuxOrientation = "h"
 let VimuxUseNearestPane = 1
 
+" for increase and decrease number key mapping
+:nnoremap <A-a> <C-a>
+:nnoremap <A-x> <C-x>
