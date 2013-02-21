@@ -1,8 +1,15 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhist_cnt =6
+=======
+let g:netrw_dirhist_cnt =5
+>>>>>>> 7ca0fee0506674c30d547d96666375515e359dd1
 let g:netrw_dirhist_1='/home/conan/workspace/RoRT/sample_app'
 let g:netrw_dirhist_2='/home/conan/workspace/GitCafe'
 let g:netrw_dirhist_3='/home/conan/Documents/conan.gitcafe.com/content'
 let g:netrw_dirhist_4='/home/conan/Dropbox/POLY/CS9223.Big.Data.Analysis.and.Management/project'
 let g:netrw_dirhist_5='/home/conan/workspace/GitCafe'
+<<<<<<< HEAD
 let g:netrw_dirhist_6='/home/conan/workspace/scratch/rabbitmq'
+=======
+>>>>>>> 7ca0fee0506674c30d547d96666375515e359dd1
