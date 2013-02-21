@@ -141,7 +141,7 @@ else
 endif
 
 " change to current file directory
-nnoremap <leader>cd :cd %:p:h<CR>
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
