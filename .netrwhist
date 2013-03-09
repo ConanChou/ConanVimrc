@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/conan/workspace/RoRT/sample_app'
-let g:netrw_dirhist_2='/home/conan/workspace/GitCafe'
-let g:netrw_dirhist_3='/home/conan/Documents/conan.gitcafe.com/content'
-let g:netrw_dirhist_4='/home/conan/Dropbox/POLY/CS9223.Big.Data.Analysis.and.Management/project'
-let g:netrw_dirhist_5='/home/conan/workspace/GitCafe'
-let g:netrw_dirhist_6='/home/conan/workspace/lab0/firefox-extension'
