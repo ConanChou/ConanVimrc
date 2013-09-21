@@ -76,14 +76,12 @@
 "       Plugin to manage Most Recently Used (MRU) files:
 "           info -> :e ~/.vim_runtime/plugin/mru.vim
 "
-"     > Command-T - http://www.vim.org/scripts/script.php?script_id=3025
-"       Command-T plug-in provides an extremely fast, intuitive mechanism for opening filesa:
-"           info -> :help CommandT
-"
 "     > Gist.vim - https://github.com/mattn/gist-vim
 "       vimscript for gist 
 "
 "     > check the `.gitmodules` file for more
+"
+"     > ctrlp - http://kien.github.io/ctrlp.vim/
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -733,16 +731,19 @@ au FileType php set keywordprg=:help
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>
 
-
 """"""""""""""""""""""""""""""
-" => Command-T
+" => ctrlp
 """"""""""""""""""""""""""""""
-let g:CommandTMaxHeight = 15
-set wildignore+=*.o,*.obj,.git,*.pyc
-noremap <leader>y :CommandTFlush<cr>
-nnoremap <silent> <Leader>tt :CommandT<CR>
-nnoremap <silent> <Leader>bb :CommandTBuffer<CR>
-"noremap! <leader>j :PeepOpen<cr>
+set runtimepath^=~/.vim_runtime/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+    \ }
 
 """"""""""""""""""""""""""""""
 " => Gist.vim
