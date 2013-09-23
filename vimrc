@@ -372,7 +372,7 @@ cnoremap <C-A>		<Home>
 cnoremap <C-E>		<End>
 cnoremap <C-K>		<C-U>
 
-cnoremap <C-P> <Up>
+cnoremap <C-B> <Up>
 cnoremap <C-N> <Down>
 
 " Useful on some European keyboards
