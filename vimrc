@@ -92,7 +92,7 @@
 call pathogen#infect()
 syntax on
 filetype plugin indent on
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape in different modes
