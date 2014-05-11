@@ -606,7 +606,7 @@ let g:miniBufExplSplitBelow=0
 
 autocmd BufRead,BufNew :call UMiniBufExplorer
 
-map <leader>u :TMiniBufExplorer<cr>
+map <leader>u :MBEToggle<cr>
 
 
 
