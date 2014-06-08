@@ -229,10 +229,12 @@ if has("gui_running")
   behave mswin
 "  set relativenumber
 else
-  colorscheme zellner
+  "colorscheme zellner
   "colorscheme solarized
+  "color codeschool
+  colorscheme distinguished
   set t_Co=256
-  set background=dark
+  "set background=dark
   set nu
 "  set relativenumber
 endif
