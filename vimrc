@@ -549,8 +549,10 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Remap VIM 0
 "map 0 ^
-
-map <F6> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>
+map <F6> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
@@ -919,6 +921,8 @@ map <leader>r :RopeRename<CR>
 " Ack
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>a <Esc>:Ack!
+set grepprg=ack\ -k
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MakeGreen
@@ -1154,3 +1158,10 @@ let VimuxUseNearestPane = 1
 " for increase and decrease number key mapping
 :nnoremap <A-a> <C-a>
 :nnoremap <A-x> <C-x>
+
+""""""""""""""""""""""
+" Resize split window
+""""""""""""""""""""""
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
