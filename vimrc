@@ -229,10 +229,12 @@ if has("gui_running")
   behave mswin
 "  set relativenumber
 else
-  colorscheme zellner
+  "colorscheme zellner
   "colorscheme solarized
+  "color codeschool
+  colorscheme distinguished
   set t_Co=256
-  set background=dark
+  "set background=dark
   set nu
 "  set relativenumber
 endif
@@ -598,17 +600,13 @@ map <leader>o :BufExplorer<cr>
 """"""""""""""""""""""""""""""
 " => Minibuffer plugin
 """"""""""""""""""""""""""""""
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplorerMoreThanOne = 0
-let g:miniBufExplModSelTarget = 0
+let g:miniBufExplorerAutoStart = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
 "let g:miniBufExplVSplit = 30
 let g:miniBufExplSplitBelow=0
 
-autocmd BufRead,BufNew :call UMiniBufExplorer
-
-map <leader>u :TMiniBufExplorer<cr>
+map <leader>u :MBEToggle<cr>
 
 
 
@@ -914,8 +912,10 @@ set completeopt=menuone,longest,preview
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Rope.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>gd :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+" map <leader>gd :RopeGotoDefinition<CR>
+let g:pymode_rope_goto_definition_bind = '<leader>gd'
+" map <leader>r :RopeRename<CR>
+let g:pymode_rope_rename_bind = '<C-c>rr'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ack
