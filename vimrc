@@ -634,6 +634,11 @@ map <leader>sa zg
 map <leader>s? z=
 
 
+function RunWith (command)
+    execute "w"
+    execute "!clear;time /usr/bin/env " . a:command . " " . expand("%")
+endfunction
+
 """"""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
@@ -653,7 +658,17 @@ au FileType python map <buffer> <leader>2 /def
 au FileType python map <buffer> <leader>C ?class 
 au FileType python map <buffer> <leader>D ?def 
 
-au FileType python map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+au FileType python map <buffer> <S-e> :call RunWith("python")<CR>
+
+"""""""""""""""""""""""""""""
+" => Ruby Section
+"""""""""""""""""""""""""""""
+autocmd FileType coffee nmap <S-e> :call RunWith("coffee")<cr>
+"
+"""""""""""""""""""""""""""""
+" => Ruby Section
+"""""""""""""""""""""""""""""
+autocmd FileType ruby   nmap <S-e> :call RunWith("ruby")<cr>
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
