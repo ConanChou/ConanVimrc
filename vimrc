@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Conan
-"             http://conanblog.me
+"             http://conanchou.github.io
 " 
 " Based_on: http://amix.dk/vim/vimrc.html
 " 
@@ -14,7 +14,7 @@
 "      <sytem> can be `mac`, `linux` or `windows`
 "
 " How_to_Upgrade:
-"    $ svn update ~/.vim_runtime
+"    $ git pull origin master
 "
 " Sections:
 "    -> General
