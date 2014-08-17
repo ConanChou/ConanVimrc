@@ -231,8 +231,8 @@ if has("gui_running")
 else
   "colorscheme zellner
   "colorscheme solarized
-  "color codeschool
-  colorscheme distinguished
+  color codeschool
+  "colorscheme distinguished
   set t_Co=256
   "set background=dark
   set nu
